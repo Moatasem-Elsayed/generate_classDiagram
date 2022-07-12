@@ -19,6 +19,9 @@
 ./generator_classDiagram
 ```
 
+### To see the diagram 
+
+>>try to use Vscode and install plantuml extension 
 ----------------------------
 
 ![image](https://user-images.githubusercontent.com/66727825/178539669-2a5e2492-5d6c-4f9d-8713-72f748ba00f3.png)
