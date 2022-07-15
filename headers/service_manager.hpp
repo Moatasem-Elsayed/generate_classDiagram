@@ -10,6 +10,7 @@
 #include <stdint.h>
 #include "UI_Manger.hpp"
 #include "container_manger.hpp"
+#include "relation_manger.hpp"
 #include <memory>
 
 #define GENERATION_NAME "test.puml"
@@ -18,6 +19,7 @@ class ServiceManger
 private:
     UIManger m_uimanger;
     std::shared_ptr<ContainerManger> m_pcontrolmanger;
+    std::shared_ptr<RelationManger> m_relationmanger;
 
 public:
     ServiceManger();
