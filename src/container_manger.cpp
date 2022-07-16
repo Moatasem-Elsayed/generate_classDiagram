@@ -3,6 +3,12 @@
 #include <array>
 ContainerManger::ContainerManger(std::string filename) : FileControl(filename)
 {
+   
+}
+void ContainerManger::create_container(){
+    File_open();
+    File_Write("' container\n");
+    File_close();
 }
 void ContainerManger::create_class(ContainerName containertype)
 
