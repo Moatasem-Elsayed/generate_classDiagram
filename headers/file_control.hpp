@@ -6,6 +6,8 @@
 #include <fstream>
 class FileControl
 {
+public:
+    void File_generate_png();
 protected:
     FileControl() = default;
     FileControl(std::string filename);

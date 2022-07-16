@@ -13,9 +13,12 @@ void ServiceManger::start_task()
 
     ///
     std::vector<std::string>classesNames;
+    std::vector<std::string>multiplicity;
     uint8_t direction=0;
     uint8_t relation_type=0;
     std::string label;
+
+    char input;
     ///
     
     m_uimanger.hello_message();
@@ -52,12 +55,17 @@ void ServiceManger::start_task()
         relation_type=m_uimanger.menu_relation_widget();
         direction=m_uimanger.menu_relation_Direction_widget();
         label=m_uimanger.relation_label_widget();
-        m_relationmanger->add_relation(classesNames,direction,relation_type,label);
+        multiplicity=m_uimanger.relation_multiplicity_widget();
+        m_relationmanger->add_relation(classesNames,direction,relation_type,label,multiplicity);
         break;
     case 'e':
     case 'E':
         m_pcontrolmanger.reset();
         m_relationmanger.reset();
+        input=m_uimanger.generate_png_widget();
+        if(input=='y'){
+            m_pcontrolmanger->File_generate_png();
+        }
         exit(0);
         break;
     default:

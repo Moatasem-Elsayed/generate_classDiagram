@@ -23,5 +23,7 @@ public:
     std::vector<std::string> relation_Classes_widget();
     uint8_t menu_relation_Direction_widget();
     std::string relation_label_widget();
+    std::vector<std::string> relation_multiplicity_widget();
+    char generate_png_widget();
 };
 #endif

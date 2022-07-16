@@ -1,5 +1,9 @@
 #include "file_control.hpp"
 #include <fstream>
+
+#include <string>
+#include <filesystem>
+#include <unistd.h>
 FileControl::FileControl(std::string filename) : m_filename(filename)
 {
     // std::cout << "File : " << filename << " start working right now " << std::endl;
@@ -29,6 +33,13 @@ void FileControl::File_clear(){
     m_Filefile.open(m_filename, std::ios::out | std::ios::trunc);
     m_Filefile<<"";
     m_Filefile.close();
+}
+
+void FileControl::File_generate_png(){
+    //std::string command="java -jar ../plantuml.jar "+m_filename;
+    //std::cout<<command<<std::endl;
+    //system(command.c_str());
+    system("java -jar ../plantuml.jar test.puml");
 }
 FileControl::~FileControl()
 {

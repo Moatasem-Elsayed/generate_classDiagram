@@ -60,6 +60,7 @@ uint8_t UIManger::menu_relation_widget() {
     std::cout << "3-Inheritance Relationship" << std::endl;
     std::cout << "4-Composition Relationship" << std::endl;
     std::cout << "5-Aggregation Relationship" << std::endl;
+    std::cout << "6-Dependency Relationship" << std::endl;
     std::cout << " please select the Relationship type Number : ";
     std::cin >> number;
     return number;
@@ -103,4 +104,35 @@ std::string UIManger::relation_label_widget(){
         label+=": "+input+" ";
     }
     return label;   
+}
+
+std::vector<std::string> UIManger::relation_multiplicity_widget(){
+    std::string Temp;
+    std::vector<std::string>multiplicity(2);
+    reset_screen();
+    std::cout << " please enter multiplicity of first container name side or press 'n' for nothing" << std::endl;
+    std::cin >> Temp;
+    if(Temp=="n"){
+
+    }else{
+        multiplicity[0]=" \""+Temp+"\" ";
+    }
+    
+    std::cout << " please enter multiplicity of second container name side or press 'n' for nothing " << std::endl;
+    std::cin >> Temp;
+    if(Temp=="n"){
+
+    }else{
+        multiplicity[1]=" \""+Temp+"\" ";
+    }
+    
+    return multiplicity;
+}
+
+char UIManger::generate_png_widget(){
+    reset_screen();
+    char input;
+    std::cout<<"want to generate png (y/n) ?"<<std::endl;
+    std::cin>>input;
+    return input;
 }

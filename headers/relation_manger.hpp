@@ -10,7 +10,7 @@ private:
 public:
     RelationManger(std::string filename);
     void create_relations();
-    void add_relation(std::vector<std::string>classesNames,uint8_t direction,uint8_t relationType,std::string label);
+    void add_relation(std::vector<std::string>classesNames,uint8_t direction,uint8_t relationType,std::string label,std::vector<std::string>multiplicity);
     ~RelationManger();
 };
 
