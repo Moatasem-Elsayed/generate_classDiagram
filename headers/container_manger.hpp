@@ -26,6 +26,7 @@ public:
     };
     ContainerManger(std::string filename);
     void create_class(ContainerName containertype);
+    void create_container();
     void add_attr();
     void add_operations();
     void class_finalize();
